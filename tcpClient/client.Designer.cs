@@ -37,9 +37,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.Label();
+            this.exit = new System.Windows.Forms.Button();
             this.notification = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox4
@@ -122,15 +123,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(83, 290);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 17);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Notification";
-            // 
             // status
             // 
             this.status.AutoSize = true;
@@ -139,6 +131,16 @@
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(0, 17);
             this.status.TabIndex = 19;
+            // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(627, 138);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(145, 58);
+            this.exit.TabIndex = 20;
+            this.exit.Text = "exit";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // notification
             // 
@@ -149,11 +151,21 @@
             this.notification.Size = new System.Drawing.Size(0, 17);
             this.notification.TabIndex = 19;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(83, 290);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Notification";
+            // 
             // CLIENT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.notification);
             this.Controls.Add(this.status);
             this.Controls.Add(this.button2);
@@ -167,7 +179,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CLIENT";
-            this.Text = "Form1";
+            this.Text = "CLIENT";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,9 +196,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label status;
+        private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Label notification;
+        private System.Windows.Forms.Label label5;
     }
 }
 

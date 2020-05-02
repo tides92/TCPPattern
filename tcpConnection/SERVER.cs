@@ -82,7 +82,10 @@ namespace tcpConnection
                         status.Text = "Closed connection to " + client.RemoteEndPoint;
                         break;
                     }
-
+                    client = clientObj as Socket;
+                    clientStream = new NetworkStream(client);
+                    byte[] notif = Encoding.UTF8.GetBytes("Processing...");
+                    clientStream.Write(notif, 0, notif.Length);
                     string url = parse(data.Text);
                     
                     webBrowser1.Navigate(data.Text);
@@ -144,5 +147,9 @@ namespace tcpConnection
             }
         }
 
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

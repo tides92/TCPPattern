@@ -38,6 +38,7 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.status = new System.Windows.Forms.Label();
             this.data = new System.Windows.Forms.Label();
+            this.exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,9 +76,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(533, 12);
+            this.button1.Location = new System.Drawing.Point(12, 380);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 58);
+            this.button1.Size = new System.Drawing.Size(110, 58);
             this.button1.TabIndex = 4;
             this.button1.Text = "Listen";
             this.button1.UseVisualStyleBackColor = true;
@@ -103,10 +104,10 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(397, 90);
+            this.webBrowser1.Location = new System.Drawing.Point(283, 12);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(391, 348);
+            this.webBrowser1.Size = new System.Drawing.Size(505, 426);
             this.webBrowser1.TabIndex = 10;
             this.webBrowser1.WebBrowserShortcutsEnabled = false;
             // 
@@ -114,7 +115,7 @@
             // 
             this.status.AutoSize = true;
             this.status.ForeColor = System.Drawing.Color.Maroon;
-            this.status.Location = new System.Drawing.Point(108, 206);
+            this.status.Location = new System.Drawing.Point(74, 207);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(0, 17);
             this.status.TabIndex = 11;
@@ -123,16 +124,27 @@
             // 
             this.data.AutoSize = true;
             this.data.ForeColor = System.Drawing.Color.MediumBlue;
-            this.data.Location = new System.Drawing.Point(108, 299);
+            this.data.Location = new System.Drawing.Point(74, 300);
             this.data.Name = "data";
             this.data.Size = new System.Drawing.Size(0, 17);
             this.data.TabIndex = 12;
+            // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(151, 380);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(112, 58);
+            this.exit.TabIndex = 13;
+            this.exit.Text = "exit";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // SERVER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.data);
             this.Controls.Add(this.status);
             this.Controls.Add(this.webBrowser1);
@@ -144,7 +156,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SERVER";
-            this.Text = "Form1";
+            this.Text = "SERVER";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +174,7 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Label status;
         private System.Windows.Forms.Label data;
+        private System.Windows.Forms.Button exit;
     }
 }
 
