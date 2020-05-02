@@ -13,12 +13,12 @@ using System.Threading;
 
 namespace tcpClient
 {
-    public partial class Form1 : Form
+    public partial class CLIENT : Form
     {
         TcpClient client = new TcpClient();
         NetworkStream serverStream;
         string readData = null;
-        public Form1()
+        public CLIENT()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace tcpClient
                 client.Connect(textBox1.Text, Int32.Parse(textBox2.Text));
             } catch
             {
-                textBox3.Text = "This port already connected!";
+                status.Text = "This port already connected!";
             }
             Thread ctThread = new Thread(getMessage);
             ctThread.Start();
@@ -68,8 +68,14 @@ namespace tcpClient
             }
             else
             {
-                textBox3.Text = readData;
+                if (readData.ToString() == "Successfull" || readData.ToString() == "Unsuccessfull")
+                    notification.Text = readData;
+                else
+                    status.Text = readData; 
             }
         }
+        
+
+
     }
 }
